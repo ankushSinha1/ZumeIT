@@ -19,7 +19,7 @@ dotenv.config()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://zumeit.onrender.com',
     credentials: true,
 }))
 mongoose.connect(process.env.MONGO_URL)         // MongoDB Connection

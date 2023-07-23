@@ -1,4 +1,4 @@
 import axios from 'axios';
 export const rootRoute = axios.create({
-    baseURL: 'http://localhost:4000/',
+    baseURL: 'https://zumeit-server.onrender.com',
 })
