@@ -88,123 +88,124 @@ export const EditUserCustomer = () =>{
     }
     return(
         <div className="container" style={{display: 'flex', justifyContent: 'center'}}>
-            <div style={{
-                display: 'flex',
-                justifyContent: 'center',
-                width: '100%',
-                maxWidth: '70%',
-                backgroundColor: 'black',
-                opacity: '100%',
-                borderRadius: '10px',
-            }}>
                 {
-                customerDetails._id ?<>
+                    customerDetails._id ?<>
                 
-                    <form noValidate onSubmit={onSubmit} style={{
-                        padding: '10px',
+                    <div style={{
+                        display: 'flex',
+                        justifyContent: 'center',
                         width: '100%',
-                        backgroundImage: `url(${require('../../../Background.png')})`,
-                        backgroundSize: '80%',
-                        opacity: '85%',
+                        maxWidth: '70%',
+                        backgroundColor: 'black',
+                        opacity: '100%',
                         borderRadius: '10px',
-                        filter: 'brightness(100%)'
                     }}>
-                        <h2 className='p-2 pb-4'>Edit User</h2>
-                        <div>
-                            <div class="row " style={{height: 'auto'}}>
-                                <div className="col-md-6" style={{height: '110px', padding: '0px 15px 0px 15px '}}>
-                                    <label className="form-label">First Name</label>
-                                    <input 
-                                        type="text"
-                                        className="form-control" 
-                                        value={firstName} 
-                                        required onChange={(e)=>setFirstName(e.target.value)} placeholder="Enter your first name"/>
-                                </div>
-                                <div className="col-md-6" style={{height: '110px', padding: '0px 15px 0px 15px '}}>
-                                    <label className="form-label">Last Name</label>
-                                    <input 
-                                        type="text"
-                                        className="form-control" 
-                                        value={lastName} 
-                                        required onChange={(e)=>setLastName(e.target.value)} placeholder="Enter your last name"/>
-                                </div>
-                                <div className="col-md-6" style={{height: '110px', padding: '0px 15px 0px 15px '}}>
-                                    <label className="form-label">Email</label>
-                                    <input 
-                                        type="email"
-                                        className="form-control" 
-                                        value={email} 
-                                        required onChange={(e)=>setEmail(e.target.value)} placeholder="Enter your email id"/>
-                                </div>
-                                <div className='col-md-6' style={{height: '110px', padding: '0px 15px 0px 15px '}}>
-                                    <label className="form-label">Enter your contact no.</label>
-                                    <input 
-                                        type="number"
-                                        className="form-control" 
-                                        value={contactNum} 
-                                        required onChange={(e)=>setContactNum(e.target.value)} placeholder='00000 00000'/>
-                                </div>
-                                <div className='col-md-12' style={{height: '110px', padding: '0px 15px 0px 15px '}}>
-                                    <label className="form-label">Enter your address</label>
-                                    <input 
-                                        type="text"
-                                        className="form-control" 
-                                        value={address} 
-                                        required onChange={(e)=>setAddress(e.target.value)} placeholder="Enter your address"/>
-                                </div>
-                                <div className='col-md-6' style={{height: 'auto', padding: '0px 15px 0px 15px '}}>
-                                    <div className='' 
-                                        style={{ 
-                                            marginBottom: '2%',
-                                            padding: '10px 10px 10px 10px', 
-                                            height: '100%',
-                                            width: '100%',
-                                        }}>
-                                        <img className="" src={profilePic.myFile} alt="Selected image will be shown here"
-                                            style={{
+                        <form noValidate onSubmit={onSubmit} style={{
+                            padding: '10px',
+                            width: '100%',
+                            backgroundImage: `url(${require('../../../Background.png')})`,
+                            backgroundSize: '80%',
+                            opacity: '85%',
+                            borderRadius: '10px',
+                            filter: 'brightness(100%)'
+                        }}>
+                            <h2 className='p-2 pb-4'>Edit User</h2>
+                            <div>
+                                <div class="row " style={{height: 'auto'}}>
+                                    <div className="col-md-6" style={{height: '110px', padding: '0px 15px 0px 15px '}}>
+                                        <label className="form-label">First Name</label>
+                                        <input 
+                                            type="text"
+                                            className="form-control" 
+                                            value={firstName} 
+                                            required onChange={(e)=>setFirstName(e.target.value)} placeholder="Enter your first name"/>
+                                    </div>
+                                    <div className="col-md-6" style={{height: '110px', padding: '0px 15px 0px 15px '}}>
+                                        <label className="form-label">Last Name</label>
+                                        <input 
+                                            type="text"
+                                            className="form-control" 
+                                            value={lastName} 
+                                            required onChange={(e)=>setLastName(e.target.value)} placeholder="Enter your last name"/>
+                                    </div>
+                                    <div className="col-md-6" style={{height: '110px', padding: '0px 15px 0px 15px '}}>
+                                        <label className="form-label">Email</label>
+                                        <input 
+                                            type="email"
+                                            className="form-control" 
+                                            value={email} 
+                                            required onChange={(e)=>setEmail(e.target.value)} placeholder="Enter your email id"/>
+                                    </div>
+                                    <div className='col-md-6' style={{height: '110px', padding: '0px 15px 0px 15px '}}>
+                                        <label className="form-label">Enter your contact no.</label>
+                                        <input 
+                                            type="number"
+                                            className="form-control" 
+                                            value={contactNum} 
+                                            required onChange={(e)=>setContactNum(e.target.value)} placeholder='00000 00000'/>
+                                    </div>
+                                    <div className='col-md-12' style={{height: '110px', padding: '0px 15px 0px 15px '}}>
+                                        <label className="form-label">Enter your address</label>
+                                        <input 
+                                            type="text"
+                                            className="form-control" 
+                                            value={address} 
+                                            required onChange={(e)=>setAddress(e.target.value)} placeholder="Enter your address"/>
+                                    </div>
+                                    <div className='col-md-6' style={{height: 'auto', padding: '0px 15px 0px 15px '}}>
+                                        <div className='' 
+                                            style={{ 
+                                                marginBottom: '2%',
+                                                padding: '10px 10px 10px 10px', 
+                                                height: '100%',
                                                 width: '100%',
-                                                height: 'auto',
-                                                display: 'flex',
-                                                justifyContent: 'center',    
-                                                borderRadius: '8px',
-                                                overflow: 'auto',
-                                                border: '4px solid #efefef',
-                                                objectFit: 'cover',
-                                            }}/>
+                                            }}>
+                                            <img className="" src={profilePic.myFile} alt="Selected image will be shown here"
+                                                style={{
+                                                    width: '100%',
+                                                    height: 'auto',
+                                                    display: 'flex',
+                                                    justifyContent: 'center',    
+                                                    borderRadius: '8px',
+                                                    overflow: 'auto',
+                                                    border: '4px solid #efefef',
+                                                    objectFit: 'cover',
+                                                }}/>
+                                        </div>
+                                    </div>
+                                    <div className='col-md-6' style={{
+                                        marginBottom: '2%',
+                                        height: 'auto', 
+                                        padding: '0px 15px 0px 15px',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center'
+                                    }}>
+                                        {profilePic.myFile? 
+                                            <button type="button" className="btn btn-danger" onClick = {()=>setProfilePic({myFile: ''})}>
+                                                Remove this image
+                                            </button>
+                                            :
+                                            <label className="btn btn-info" for="images" >
+                                                Upload profile image
+                                            </label>
+                                        }
+                                        <input type="file" id="images" required onChange={e=>onChangeProfilePict(e)} accept=".png, .jpg, .jpeg" hidden/>
+                                    </div>
+                                    <div 
+                                        style={{
+                                            display: 'flex', 
+                                            justifyContent: 'center', 
+                                            flexDirection: 'column', 
+                                            gap: '8px',
+                                        }}>
+                                        <button type="submit" class="btn btn-primary" style={{width: '100%', borderRadius: '20px'}}>Update</button>
+                                        <button class="btn btn-danger" style={{width: '100%', borderRadius: '20px'}} onClick={()=>navigate(-1)}>Cancel</button>
                                     </div>
                                 </div>
-                                <div className='col-md-6' style={{
-                                    marginBottom: '2%',
-                                    height: 'auto', 
-                                    padding: '0px 15px 0px 15px',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center'
-                                }}>
-                                    {profilePic.myFile? 
-                                        <button type="button" className="btn btn-danger" onClick = {()=>setProfilePic({myFile: ''})}>
-                                            Remove this image
-                                        </button>
-                                        :
-                                        <label className="btn btn-info" for="images" >
-                                            Upload profile image
-                                        </label>
-                                    }
-                                    <input type="file" id="images" required onChange={e=>onChangeProfilePict(e)} accept=".png, .jpg, .jpeg" hidden/>
-                                </div>
-                                <div 
-                                    style={{
-                                        display: 'flex', 
-                                        justifyContent: 'center', 
-                                        flexDirection: 'column', 
-                                        gap: '8px',
-                                    }}>
-                                    <button type="submit" class="btn btn-primary" style={{width: '100%', borderRadius: '20px'}}>Update</button>
-                                    <button class="btn btn-danger" style={{width: '100%', borderRadius: '20px'}} onClick={()=>navigate(-1)}>Cancel</button>
-                                </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                     </> : 
                     <>
                         <div className="d-flex justify-content-center align-items-center mb-2">
@@ -213,7 +214,6 @@ export const EditUserCustomer = () =>{
                         </div>
                     </>
                 }
-            </div>
         </div>
         )
     }
