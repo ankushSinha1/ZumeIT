@@ -1,0 +1,12 @@
+li.nav-item{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.dropdown-menu.mb-3{
+    width: 100%;
+    background-color:rgb(87, 87, 87);
+}
+.dropdown-item{
+    color: rgb(211, 209, 209)
+}

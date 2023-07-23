@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+div.row.col-12{
+    height: 300px;
+    display: flex;
+    align-content: space-around;
+    margin: 50px 0px 0px 0px;
+    border-radius:10px;
+    filter: brightness(80%);
+    max-width: 1000px;
+    background-image: url('../../Background.png');
+    background-size: 70%;
+    opacity: 95%;
+}
+div.row.col-12 div{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.btn.btn-info{
+    width: 60%;
+    border-radius: 20px;
+}
