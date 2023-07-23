@@ -86,6 +86,16 @@ export const EditUserCustomer = () =>{
         })
         .catch(err => console.log(err))
     }
+    if(!customerDetails._id){
+        return (
+
+            <div className="d-flex justify-content-center align-items-center mb-2">
+                <div class="spinner-border spinner-border-sm me-2" role="status"></div>
+                <span class="">Loading details...</span>
+            </div>
+        )
+    }
+    
     return(
         <div className="container" style={{display: 'flex', justifyContent: 'center'}}>
             <div style={{
@@ -107,14 +117,7 @@ export const EditUserCustomer = () =>{
                 filter: 'brightness(100%)'
             }}>
                 <h2 className='p-2 pb-4'>Edit User</h2>
-                {customerDetails._id ? <></> : 
-                    <>
-                        <div className="d-flex justify-content-center align-items-center mb-2">
-                            <div class="spinner-border spinner-border-sm me-2" role="status"></div>
-                            <span class="">Loading details...</span>
-                        </div>
-                    </>
-                }
+               
                 <div>
                     <div class="row " style={{height: 'auto'}}>
                         <div className="col-md-6" style={{height: '110px', padding: '0px 15px 0px 15px '}}>
