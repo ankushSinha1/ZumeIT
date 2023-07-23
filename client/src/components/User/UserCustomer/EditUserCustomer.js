@@ -95,7 +95,6 @@ export const EditUserCustomer = () =>{
             </div>
         )
     }
-    
     return(
         <div className="container" style={{display: 'flex', justifyContent: 'center'}}>
             <div style={{
@@ -117,7 +116,6 @@ export const EditUserCustomer = () =>{
                 filter: 'brightness(100%)'
             }}>
                 <h2 className='p-2 pb-4'>Edit User</h2>
-               
                 <div>
                     <div class="row " style={{height: 'auto'}}>
                         <div className="col-md-6" style={{height: '110px', padding: '0px 15px 0px 15px '}}>
