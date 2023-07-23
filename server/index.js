@@ -24,7 +24,7 @@ app.use(cors({
 }))
 mongoose.connect(process.env.MONGO_URL)         // MongoDB Connection
 
-// app.use('/', homeRoute)
+app.use('/', homeRoute)
 app.use('/category', categoryRoute)
 app.use('/payment', paymentRoute)
 app.use('/register', registerRoutes)
