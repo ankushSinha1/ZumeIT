@@ -1,2 +1,2 @@
 # ZumeIT
-zumeit.onrender.com
+https://zumeit.onrender.com
