@@ -1,0 +1,8 @@
+.form-control, .form-select{
+    border-bottom: transparent;
+
+    &:focus{
+        border-bottom: 3px solid rgb(138, 138, 138);
+        box-shadow: 0px 3px 6px rgba(#000,0.4);
+    }
+}

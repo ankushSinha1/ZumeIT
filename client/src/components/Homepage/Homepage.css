@@ -3,6 +3,11 @@
     background-color: rgb(213, 213, 213);
     border-radius: 5px;
 }
+.product:hover{
+    cursor: pointer;
+    filter: brightness(93%);
+    transition: all .2s;
+}
 .col-sm-4{
     padding: 10px;
     height: 100%;

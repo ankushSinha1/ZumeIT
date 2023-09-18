@@ -299,7 +299,7 @@ export const EditProduct = () =>{
                                     <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
                                 </div>
 
-                                : <><label for='mulImages'>Upload pictures</label></>
+                                : <><label for='mulImages' className="btn btn-info w-auto">Upload pictures</label></>
                             }
                             <input 
                                 type="file" 

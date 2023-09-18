@@ -186,7 +186,7 @@ export const Navbar = () => {
     }
     
     return(
-        <div style={{marginBottom: '30px'}}>
+        <div className='navbar-parent' style={{marginBottom: '30px'}}>
             <nav className="navbar navbar-dark bg-dark">
                 <div className="container-fluid collapse navbar-collapse">
                     <img src={require('../../ZumeIT.png')} 

@@ -43,10 +43,8 @@ import { ToastContainer } from 'react-toastify';
 import '../node_modules/react-toastify/dist/ReactToastify.css';
 function App() {
   return (
-    <div className="App" style={{}}>
+    <div className="App">
       <BrowserRouter>
-      <header className="App-header">
-      </header>
       <Navbar />
         <Routes>
           {/*Homepage */}

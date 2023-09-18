@@ -1,0 +1,40 @@
+.form-control, .form-select{
+    border-bottom: transparent;
+
+    &:focus{
+        border-bottom: 3px solid rgb(138, 138, 138);
+        box-shadow: 0px 3px 6px rgba(#000,0.4);
+    }
+}
+.react-tel-input{
+    height: 38px;
+    outline: none;
+    & .form-control{
+        margin: auto;
+        width: 100%;
+        height: 38px;
+        box-shadow: none;
+        border: none!important;
+
+    }
+    & .selected-flag{
+        box-sizing: border-box;
+        background:none;
+        height: 25px;
+    }
+    & .flag-dropdown{
+        display: flex;
+        align-items: center;
+    }
+    & .country-list .country{
+        &{
+            color: #7d7d7d;
+            &:hover{
+                transition: all .2s;
+                background-color: rgb(165, 165, 165);
+                color: black;
+            }
+        }
+
+    }
+}

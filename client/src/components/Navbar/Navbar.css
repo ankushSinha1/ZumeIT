@@ -1,3 +1,9 @@
+.navbar-parent{
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
 li.nav-item{
     display: flex;
     flex-wrap: wrap;

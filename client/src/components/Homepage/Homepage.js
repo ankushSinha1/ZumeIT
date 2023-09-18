@@ -2,13 +2,14 @@ import { useEffect, useState } from "react"
 import {Link, useNavigate} from 'react-router-dom'
 import {rootRoute} from "../Axios/axiosRoot.js";
 import './Homepage.css'
+import {Loader} from "../Helpers/Loader.js";
 export const Homepage = () => {
   const navigate = useNavigate()
     const [allProducts, setAllProducts] = useState([]);
     useEffect(()=>{
-        rootRoute.get('/')
-        .then(res =>setAllProducts(res.data))
-        .catch(err => console.log(err))
+      rootRoute.get('/')
+      .then(res =>setAllProducts(res.data))
+      .catch(err => console.log(err))
     }, [])
     if(allProducts[0]){
         return(
@@ -34,10 +35,7 @@ export const Homepage = () => {
         )
     }else{
         return (
-          <div className="d-flex justify-content-center align-items-center" style={{ marginTop: '50px '}}>
-              <div className="spinner-border spinner-border-sm me-2" role="status"></div>
-              Loading 
-          </div>
+          <Loader/>
         )
     }
 }

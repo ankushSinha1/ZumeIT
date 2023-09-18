@@ -4,3 +4,7 @@ body{
     color:rgb(203, 200, 200);
     /* background-image: url("C:\MySTUFF\WebDevCodes\FullStackProjects\ZumeIT\client\public\Background.png"); */
 }
+::selection{
+    background-color:  rgb(218, 218, 218);
+    color: black;
+}

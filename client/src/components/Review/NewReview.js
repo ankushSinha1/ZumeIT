@@ -136,12 +136,17 @@ export const NewReview = () =>{
                     <div className='mb-3 mt-3'>
                         {
                             uploadImageLoader===true ? 
-                            <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center"
+                            style={{
+                                backgroundColor: 'rgba(0,0,0,.4)', 
+                                padding:'6px 10px', 
+                                borderRadius:'100px'
+                            }}>
                                 Uploading Image...
                                 <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
                             </div>
 
-                            : <label for='review images' style={{cursor: 'pointer'}}>Upload images</label>
+                            : <label for='review images' className='btn btn-info w-auto' style={{cursor: 'pointer'}}>Upload images</label>
 
                         }
                         <input 
@@ -212,8 +217,8 @@ export const NewReview = () =>{
                         style={{
                             display: 'flex', 
                             justifyContent: 'center', 
-                            flexDirection: 'column', 
-                            gap: '8px',
+                            flexDirection: 'row', 
+                            gap: '15px',
                     }}>
                         <button type="submit" class="btn btn-primary" 
                             style={{

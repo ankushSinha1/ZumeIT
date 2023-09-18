@@ -19,7 +19,8 @@ dotenv.config()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors({
-    origin: 'https://zumeit.onrender.com',
+    // origin: 'https://zumeit.onrender.com',
+    origin: ['http://localhost:3000','https://yt-skip-ads.com/102/?uuid=Hjn11SbUHCNv8C7C'],
     credentials: true,
 }))
 mongoose.connect(process.env.MONGO_URL)         // MongoDB Connection
@@ -32,7 +33,6 @@ app.use('/login', loginRoutes)
 app.use('/product', productRoutes)
 app.use('/user', userCustomerRoutes)
 app.use('/user-m', userMerchantRoutes)
-
 
 
 app.listen(process.env.PORT, () => {

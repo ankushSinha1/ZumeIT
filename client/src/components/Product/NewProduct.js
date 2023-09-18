@@ -26,9 +26,11 @@ export const NewProduct = () => {
     }, [])
     const onChangeProductImage = async (e) => {
         const dataPict = await convToBase64(e.target.files[0])
-        setUploadImageLoader(true)
-        await rootRoute.post('product/uploadImages', {myFile: dataPict})
-        .then(res => {
+        if(dataPict){
+
+            setUploadImageLoader(true)
+            await rootRoute.post('product/uploadImages', {myFile: dataPict})
+            .then(res => {
                 setProductImages([...productImages, res.data.secure_url])
                 setUploadImageLoader(false)
                 notify('Image Uploaded', 'success')
@@ -37,6 +39,7 @@ export const NewProduct = () => {
                 setUploadImageLoader(false)
                 notify(err.toString(), 'error')
             })
+        }
     }
     
     const handleSpecsInputChange = (e, index) =>{
@@ -276,12 +279,18 @@ export const NewProduct = () => {
                         <div className="col-md-12 mb-3">
                             {
                                 uploadImageLoader===true ? 
-                                <div class="d-flex align-items-center">
+                                <div className="d-flex align-items-center " 
+                                    style={{
+                                        backgroundColor: 'rgba(0,0,0,.4)', 
+                                        padding:'6px 10px', 
+                                        borderRadius:'100px'
+                                    }}
+                                >
                                     Uploading Image...
                                     <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
                                 </div>
 
-                                : <label for='mulImages' style={{cursor: 'pointer'}}>Upload pictures</label>
+                                : <label for='mulImages' className="btn btn-info w-auto">Upload pictures</label>
 
                             }
                             <input 
@@ -334,8 +343,8 @@ export const NewProduct = () => {
                         <div style={{
                             display: 'flex', 
                             justifyContent: 'center', 
-                            flexDirection: 'column', 
-                            gap: '8px',
+                            flexDirection: 'row', 
+                            gap: '15px',
                         }}>
                             <button type="submit" class="btn btn-primary" 
                                 style={{

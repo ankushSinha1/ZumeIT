@@ -4,6 +4,7 @@ import { rootRoute } from "../Axios/axiosRoot";
 import {  useSelector } from "react-redux";
 import { notify } from "../Notify/notify";
 import { monthNumToName } from "../Helpers/monthNumToName.js";
+import {Loader} from '../Helpers/Loader.js'
 export const ShowProduct = () => {
     const {productId} = useParams();
     const navigate = useNavigate()
@@ -134,23 +135,24 @@ export const ShowProduct = () => {
                             width: '50%',
                             minWidth:'500px',
                             height: "500px",
-                            padding:"10px"
+                            padding:"10px",
                         }}>
                             <div className="carousel-inner" 
                                 style={{
                                     display: 'flex',
                                     width: 'auto',
                                     justifyContent: 'flex-start',
-                                    height: '100%',
+                                    height: 'auto',
+                                    marginTop:'-20px'
                                 }}>
                                 <div className="carousel-item active" style={{
                                     width: '100%',
-                                    height: '100%'
+                                    height: 'auto'
                                 }}>
                                     <img src={productDetails.product.images[0]} alt='Product image' 
                                         style={{
                                             width: '100%', 
-                                            height: '100%', 
+                                            height: 'auto', 
                                             objectFit: 'fill',
                                             borderRadius: '10px'
                                         }}/>
@@ -160,7 +162,7 @@ export const ShowProduct = () => {
                                         <div className="carousel-item" style={{
                                             // display: 'flex',
                                             width: '100%',
-                                            height: '100%'
+                                            height: 'auto'
                                         }}>
                                             <img src={img} alt='Product image' 
                                                 style={{
@@ -196,18 +198,27 @@ export const ShowProduct = () => {
                                 <Link to={`/user-m/${productDetails.product.merchantDetails._id}`} 
                                     style={{
                                         color: '#0bcbf7', 
-                                        textDecoration: 'none'
+                                        textDecoration: 'none',
+                                        fontSize:'18px'
                                     }}
                                 >
                                     {productDetails.product.merchantDetails.firstName} {productDetails.product.merchantDetails.lastName}
                                 </Link>
                             </span>
-                            <p> ₹ {productDetails.product.price}</p>
-                            <div className="row">
+                            <p style={{fontSize:'20px'}}> ₹ {productDetails.product.price}</p>
+                            <div className="row" 
+                                style={{
+                                    border:'3px solid #8d8d8d',
+                                    padding:'3px', 
+                                    borderRadius:'10px',
+                                    marginBottom:'10px'
+                                }}
+                            >
+                                <h4>Details:</h4>
                                 {productDetails.product.specs.map(spec => {
                                     return(
                                         <div>
-                                            <div>{spec.property}: {spec.value}</div>
+                                            <div ><strong>{spec.property}</strong>: {spec.value}</div>
                                         </div>
                                     )
                                 })}
@@ -297,7 +308,7 @@ export const ShowProduct = () => {
                                                 <div style={{height: '50px', overflow: 'auto'}}>{review.text}</div>
                                                 <div style={{
                                                     display: 'flex',
-                                                    alignItems: 'stretch',
+                                                    alignItems: 'center',
                                                 }}>
                                                     {review.productRating} 
                                                     <svg 
@@ -306,7 +317,7 @@ export const ShowProduct = () => {
                                                         height="18" 
                                                         fill="currentColor" 
                                                         class="bi bi-star-fill ms-1" 
-                                                        viewBox="0 0 16 16"
+                                                        viewBox="0 0 20 20"
                                                     >
                                                         <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 
                                                         6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 
@@ -347,9 +358,8 @@ export const ShowProduct = () => {
         )
     }
     return(
-        <div className="d-flex justify-content-center align-items-center" style={{gap: '10px', marginTop: '50px '}}>
-            <div className="spinner-border spinner-border-sm" role="status"></div>
-            Loading
-        </div>
+        <>
+            <Loader/>
+        </>
     )
 }
